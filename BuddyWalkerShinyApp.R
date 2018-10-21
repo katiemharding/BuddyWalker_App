@@ -184,7 +184,7 @@ server = function(input, output) {
     })
     write.csv(test_data,paste(format(Sys.time(), "%b_%d_%Y_%H_%M_%S"),"SubmittedFile.csv", sep = "_"),row.names = FALSE)
   })
-  # I don't know why this is needed, but it breaks when removed
+  # Do not remove this line, necessary to run
   output$test1 <- renderTable({WalkerInput()})
   
   output$TimePlot <- renderPlot({
